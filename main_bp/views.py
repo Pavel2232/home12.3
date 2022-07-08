@@ -1,6 +1,6 @@
 import logging
 from flask import Blueprint, render_template, request
-from utils import search_post
+from main_bp.utils import search_post
 
 main_bp_blueprint = Blueprint('main_bp_blueprint', __name__, template_folder='templates')
 

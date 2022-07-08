@@ -2,9 +2,9 @@ import logging
 from json import JSONDecodeError
 
 from flask import Blueprint, render_template, request, send_from_directory
-from utils import add_post, save_pic
+from loader_bp.utils import add_post, save_pic
 
-loader_bp_blueprint = Blueprint('loader_bp_blueprint', __name__, template_folder='template')
+loader_bp_blueprint = Blueprint('loader_bp_blueprint', __name__, template_folder='templates')
 
 
 @loader_bp_blueprint.route('/post')

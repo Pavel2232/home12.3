@@ -1,6 +1,6 @@
 import logging
 
-from flask import Flask
+from flask import Flask, send_from_directory
 from main_bp.views import main_bp_blueprint
 from loader_bp.views import loader_bp_blueprint
 
@@ -15,9 +15,9 @@ app.register_blueprint(main_bp_blueprint)
 logging.basicConfig(filename='basic.log', level=logging.INFO)
 
 
-#@app.route("/uploads/<path:path>")
-#def static_dir(path):
- #   return send_from_directory("uploads", path)
+@app.route("/uploads/<path:path>")
+def static_dir(path):
+   return send_from_directory("uploads", path)
 
 
 if __name__ == "__main__":

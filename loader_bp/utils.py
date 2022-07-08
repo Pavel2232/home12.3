@@ -11,7 +11,7 @@ def add_post(post):
     return post
 
 
-def save_pic(pic):
+def save_pic(pic) -> str:
     """Сохранение картинки в файл"""
     filename = pic.filename
     path = f'./uploads/images/{filename}'
